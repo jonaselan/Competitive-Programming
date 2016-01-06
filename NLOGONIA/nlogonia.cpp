@@ -35,9 +35,7 @@ int main () {
      cin >> n; cin >> m;
        for(int i = 0; i < k; i++){
           cin >> x; cin >> y;
-             if ((n == x) || (y == m)) {
-               cout << "divisa\n";
-             }
+             if ((n == x) || (y == m)) { cout << "divisa\n"; } 
              else {
                NO();
                NE();

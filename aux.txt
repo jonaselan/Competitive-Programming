@@ -1,0 +1,1 @@
+- converter char para inteiro: inteiro = caracter - 48

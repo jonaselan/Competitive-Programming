@@ -1,16 +1,19 @@
-#include <stdio.h>
 #include <iostream>
-int main()
-{
-  double m;
-  int n;
-	//m = 1;
-  std::cin >> m;
-  //n = 3;
-  std::cin >> n;
+#include <string.h>
 
-  double f = m/n;
-  //printf("%f", f);
-  printf("%.3f", f * 100);
-  printf("%\n");
+// https://www.urionlinejudge.com.br/judge/pt/problems/view/1110
+
+using namespace std;
+
+int main(){
+    char sim[1000];
+    gets(sim);
+
+    while(sim != "*"){
+      gets(sim);
+
+      cout << sim;
+    }
+
+
 }

@@ -1,1 +1,4 @@
-- converter char para inteiro: inteiro = caracter - 48
+- converter char para inteiro:
+    inteiro = caracter - 48
+- limitar as casas decimais:
+    printf("%.3f", Numero_double);

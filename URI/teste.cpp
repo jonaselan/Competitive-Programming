@@ -1,39 +1,38 @@
 #include <iostream>
-#include <string>
-// https://www.urionlinejudge.com.br/judge/pt/problems/view/1069
+
 using namespace std;
 
-int main(){
-  int num, aux, aux2, cont;
-  string mina;
-  cin >> num;
+// https://www.urionlinejudge.com.br/judge/pt/problems/view/1162
 
-  while (num) {
-    aux = 0, aux2 =0, cont = 0;
-    cin >> mina;
+int main() {
+  int n, sizeTrain;
+  cin >> n;
 
-    while (aux < mina.size()) {
-      if (mina[aux] == '<') {
-        aux2 = aux+1;
-
-        while ((mina[aux2] != '>') && (aux2 < mina.size())){
-          aux2++;
-        }
-
-        if (mina[aux2] == '>'){
-          cont++;
-          //cout << mina << " - ";
-          mina[aux] = '.';
-          mina[aux2] = '.';
-          //cout << mina << " -- " << cont << "\n";
-        }
-
-      }
-      aux++;
+  while (n) {
+    cin >> sizeTrain;
+    int wagon[sizeTrain];
+    for (int i = 0; i < sizeTrain; i++) {
+      cin >> wagon[i];
     }
 
-    cout << cont << "\n";
-    num--;
+    int position = 0, aux, x =0;
+    while (position < sizeTrain) {
+      //cout << sizeTrain<< " - " << position+1 << "\n";
 
+      //while(sizeTrain != position+1){
+        if (wagon[position] > wagon[position+1]) {
+          cout << wagon[position] << " - " << wagon[position+1] << "\n";
+          aux = wagon[position];
+          wagon[position] = wagon[position+1];
+          wagon[position+1] = aux;
+          x++;
+        }
+        position++;
+      //}
+
+    }
+
+    cout << "Optimal train swapping takes " << x <<" swaps.";
+    n--;
   }
 }

@@ -1,5 +1,5 @@
 <?php
-
+// https://leetcode.com/problems/remove-element/
 function removeElement(&$nums, $val) {
     foreach($nums as $key => $num) {
         if ($num == $val) {
